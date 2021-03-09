@@ -5,9 +5,7 @@ let deleteFirstPhotoDelay;
 async function start() {
   try {
     const response = await fetch("https://dog.ceo/api/breeds/list/all");
-    console.log(response);
     const data = await response.json();
-    console.log(data);
     createBreedList(data.message);
   } catch (e) {
     console.log(e);
